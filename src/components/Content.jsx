@@ -27,7 +27,7 @@ const Content = () => {
 		setText(event.target.value);
 	};
 	return (
-		<div>
+		<div className="content-container">
 			<div className="content">
 				<h2>{labelText}</h2>
 				<textarea
