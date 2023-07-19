@@ -7,7 +7,7 @@ function App() {
 	return (
 		<>
 			<div className="container">
-				<Header title="Text-Mover" />
+				<Header title="Text-Keeper" />
 				<Content />
 				<Footer />
 			</div>

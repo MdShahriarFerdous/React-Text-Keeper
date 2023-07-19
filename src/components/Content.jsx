@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import Item from "./Item";
+import { v4 as uuidv4 } from "uuid";
 
 const Content = () => {
-	const [labelText, setLabelText] = useState("Type Your Text");
+	const [labelText, setLabelText] = useState("Write Your Text");
 	const [defaultColor, setDefaultColor] = useState(true);
 	const [text, setText] = useState("");
 	const [contentItems, setContentItems] = useState([]);
@@ -25,6 +27,14 @@ const Content = () => {
 
 	const handleChange = (event) => {
 		setText(event.target.value);
+	};
+
+	const handleDelete = (id) => {
+		setContentItems((prevValue) => {
+			return prevValue.filter((item, index) => {
+				return index !== id;
+			});
+		});
 	};
 	return (
 		<div className="content-container">
@@ -50,8 +60,15 @@ const Content = () => {
 				</button>
 			</div>
 			<div className="text-holder">
-				{contentItems.map((item) => {
-					return <div className="note">{item}</div>;
+				{contentItems.map((item, index) => {
+					return (
+						<Item
+							key={uuidv4()}
+							id={index}
+							text={item}
+							deleteText={handleDelete}
+						/>
+					);
 				})}
 			</div>
 		</div>

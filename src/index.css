@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+html {
+	scroll-behavior: smooth;
+}
 * {
 	margin: 0;
 	box-sizing: border-box;
@@ -6,15 +9,16 @@
 }
 
 .header {
-	background-color: #646cff;
+	background: #fff;
 	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 600;
 	min-height: 5rem;
 	padding: 1rem 0;
+	box-shadow: 0 2px 5px #e6e6e6;
 }
 .header h1 {
-	color: white;
+	color: #646cff;
 }
 
 .content {
@@ -30,7 +34,7 @@
 
 h2 {
 	margin: 1.2rem 0;
-	color: #0b132b;
+	color: #343434;
 }
 .content button {
 	margin-top: 1.4rem;
@@ -62,7 +66,7 @@ h2 {
 	bottom: 0;
 	width: 100%;
 	min-height: 5.5rem;
-	background-color: #f5f0f6;
+	background-color: #cacdff;
 	padding: 1.5rem 0;
 	text-align: center;
 }
@@ -70,7 +74,7 @@ h2 {
 .footer h3 {
 	max-width: 445px;
 	margin: 16px auto;
-	color: #0b132b;
+	color: #343434;
 	line-height: 1.5;
 }
 
@@ -93,4 +97,23 @@ h2 {
 	padding: 10px;
 	width: 240px;
 	margin: 16px;
+	position: relative;
+}
+.note p {
+	padding-bottom: 0.875rem;
+	margin-bottom: 1.5rem;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+.note button {
+	padding: 0.345rem 0.87rem;
+	background-color: #f72c25;
+	border-radius: 0.875rem;
+	color: white;
+	border: none;
+
+	position: absolute;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	cursor: pointer;
 }
