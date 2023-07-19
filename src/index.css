@@ -116,4 +116,9 @@ h2 {
 	bottom: 0.5rem;
 	right: 0.5rem;
 	cursor: pointer;
+	box-shadow: 0 2px 5px #f55f59;
+	transition: background-color 0.15s;
+}
+.note button:hover {
+	background-color: #e01d17;
 }
