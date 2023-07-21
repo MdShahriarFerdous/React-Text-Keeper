@@ -9,12 +9,13 @@ const Content = () => {
 	const [contentItems, setContentItems] = useState([]);
 
 	const handleClick = () => {
-		setLabelText("Text Moved Below");
-		// setContentText(text);
 		setText("");
-		setContentItems((preValue) => {
-			return [...preValue, text];
-		});
+		if (text.trim() !== "") {
+			setContentItems((preValue) => {
+				return [...preValue, text];
+			});
+			setLabelText("Text Moved Below");
+		}
 	};
 
 	const handleMouseOver = () => {
